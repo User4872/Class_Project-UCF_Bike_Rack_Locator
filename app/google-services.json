@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690687273150",
+    "project_id": "bike-racks-f4a51",
+    "storage_bucket": "bike-racks-f4a51.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690687273150:android:0995bb6770b0ce57d356ef",
+        "android_client_info": {
+          "package_name": "com.example.campus_bike_rack_locator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDKmbgDgjhaao0Kg-yoFhZhL7D_CfNJ5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
