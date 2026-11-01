@@ -11,7 +11,7 @@
         android:id="@+id/tvReportDateTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="09-15-2026   7:20 AM"
+        android:text="09-16-2026   1:20 PM"
         android:textColor="@color/text_primary"
         android:textSize="16sp" />
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Report: CB2 Rack Status"
+        android:text="Report: ENG1 Rack Status"
         android:textColor="@color/text_primary"
         android:textSize="16sp" />
 

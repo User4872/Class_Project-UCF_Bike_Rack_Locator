@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Campus_Bike_Rack_Locator</string>
+    <string name="wrong_update">Wrong? Click <b><u>here</u></b> to update</string>
 </resources>
