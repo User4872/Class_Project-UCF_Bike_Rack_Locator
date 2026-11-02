@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Campus_Bike_Rack_Locator</string>
     <string name="wrong_update">Wrong? Click <b><u>here</u></b> to update</string>
+    <string name="app_title">UCF Main Campus\nBike Rack Locator</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
 </resources>
