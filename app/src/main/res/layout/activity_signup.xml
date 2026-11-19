@@ -36,8 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77"
-        app:strokeWidth="4dp" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <EditText
         android:id="@+id/emailAddressField"
@@ -46,6 +45,7 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="@string/username"
+        android:inputType="text"
         android:textColor="@color/card_gray"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +61,7 @@
         android:background="@color/white"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/first_name"
+        android:hint="@string/first_name"
         android:textColor="@color/card_gray"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +76,7 @@
         android:background="@color/white"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/last_name"
+        android:hint="@string/last_name"
         android:textColor="@color/card_gray"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
