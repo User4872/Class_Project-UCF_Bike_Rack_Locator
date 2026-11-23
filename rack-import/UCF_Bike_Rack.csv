@@ -1,0 +1,93 @@
+﻿feature_ID,name,latitude,longitude
+1,Lake Claire Building 60 Bike Rack,28.60400037,-81.20415457
+2,Lake Claire Building 59 Bike Rack 1,28.60394463,-81.20429587
+3,Lake Claire Building 59 Bike Rack 2,28.60385103,-81.20440292
+4,Lake Claire Building 57 Bike Rack,28.60349931,-81.20518744
+5,Lake Claire Building 58 Bike Rack 1,28.60396932,-81.20518754
+6,Lake Claire Building 58 Bike Rack 2,28.60405461,-81.20516741
+7,Lake Claire Building 58 Bike Rack 3,28.60408028,-81.20477614
+8,Lake Claire Building 66 Bike Rack 1,28.60465521,-81.20293115
+9,Lake Claire Building 66 Nike Rack 2,28.6045966,-81.20299539
+10,Marching Band Practice Facility Bike Rack 1,28.59182547,-81.20190807
+11,Marching Band Practice Facility Bike Rack 2,28.59182553,-81.20186857
+12,Recreation and Wellness Center Bike Rack 1,28.59625576,-81.19814118
+13,Hercules Building 113 Bike Rack 1,28.59416971,-81.2007871
+14,Hercules Building 113 Bike Rack 2,28.59418159,-81.20075181
+15,Hercules Building 111 Bike Rack 1,28.59333709,-81.20018926
+16,Hercules Building 111 Bike Rack 2,28.59335625,-81.20015141
+17,Nike Building 103 Bike Rack,28.59435663,-81.19742786
+18,Nike Building 107 Bike Rack,28.59434904,-81.19738888
+19,Nike Building 105 Bike Rack,28.59484796,-81.19722096
+20,Nike Building 104 Bike Rack,28.59485171,-81.19726967
+21,Nike Building 101 Bike Rack 1,28.59501607,-81.19854828
+22,Nike Building 101 Bike Rack 2,28.59498264,-81.19854389
+23,Hercules Building 109 Bike Rack 1,28.59468436,-81.19974871
+24,Hercules Building 109 Bike Rack 2,28.59468658,-81.19970122
+25,Brevard Hall Bike Rack 1,28.59876229,-81.19881452
+26,Brevard Hall Bike Rack 2,28.59870341,-81.19890534
+27,Flager Hall Bike Rack,28.5982469,-81.19787072
+28,Polk Hall Bike Rack 1,28.59768588,-81.20117867
+29,Polk Hall Bike Rack 2,28.59771155,-81.20118075
+30,Volusia Hall Bike Rack,28.59853573,-81.20095927
+31,Physical Sciences Building Bike Rack 1,28.59945613,-81.19819074
+32,Center for Multilingual Multicultural Studies Bike Rack 1,28.594965,-81.20222424
+33,Center for Multilingual Multicultural Studies Bike Rack 2,28.59494258,-81.20224551
+34,Barbara Ying Center Bick Rack,28.59540481,-81.20252033
+35,Recreation and Wellness Center Bike Rack 2,28.59557935,-81.20094564
+36,Physical Sciences Building Bike Rack 2,28.5995944,-81.19797654
+37,Physical Sciences Building Bike Rack 3,28.59971109,-81.1977914
+38,Health Center & Pharmacy Bike Rack,28.59959201,-81.19919345
+39,Physical Sciences Building Bike Rack 4,28.6001373,-81.19773349
+40,Ferrell Commons Bike Rack 1,28.5976812,-81.19971429
+41,Ferrell Commons Bike Rack 2,28.5984595,-81.20030163
+42,Mathematical Sciences Building Bike Rack,28.6000625,-81.2004866
+43,Performing Arts Center Music Bike Rack,28.60190246,-81.20402004
+44,Trevor Colbourn Hall Bike Rack 1,28.60139273,-81.20312621
+45,Howard Phillips Hall Bike Rack,28.60036879,-81.20254825
+46,Burnett Honors College Bike Rack,28.60222891,-81.20163207
+47,John T. Washington Center Bike Rack,28.60097846,-81.20132288
+48,Engineering I Bike Rack 1,28.60112148,-81.19822266
+49,Engineering I Bike Rack 2,28.60112153,-81.19818477
+50,Engineering I Bike Rack 3,28.60110264,-81.19824495
+51,Business Administration II Bike Rack 1,28.60105052,-81.19836121
+52,Business Administration II Bike Rack 2,28.60105068,-81.19825128
+53,Engineering II Bike Rack 1,28.6021776,-81.19778629
+54,Engineering II Bike Rack 2,28.60214672,-81.19781714
+55,Health Science I Bike Rack 1,28.60363284,-81.19882944
+56,CREOL Bike Rack 1,28.60083847,-81.19688824
+57,Parking Garage H Bike Rack,28.60413315,-81.20165968
+58,Nicholson School of Communication Bike Rack 1,28.60407618,-81.20333617
+59,Lake Claire Community Center Bike Rack,28.60446118,-81.20301379
+60,Phychology Building Bike Rack,28.60449921,-81.19945908
+61,Classroom Building I Bike Rack,28.60366336,-81.19991629
+62,Nicholson School of Communication Bike Rack 2,28.60379077,-81.2036028
+63,Rosen College Apartments Bike Rack 1,28.43007696,-81.44119163
+64,Rosen College Apartments Bike Rack 2,28.43006002,-81.44116893
+65,Rosen College Apartments Bike Rack 3,28.42918598,-81.44127615
+66,Rosen College Apartments Bike Rack 4,28.4291758,-81.44124774
+67,Trevor Colbourn Hall Bike Rack 2,28.60174636,-81.20252911
+68,Rehearsal Hall Bike Rack,28.60165834,-81.20248486
+69,Student Union Shuttle Stop Bike Rack 1,28.60271377,-81.20113001
+70,Student Union Shuttle Stop Bike Rack 2,28.60273217,-81.20110084
+71,Student Union Shuttle Stop Bike Rack 3,28.60274129,-81.20090688
+72,Student Union Shuttle Stop Bike Rack 4,28.60277544,-81.20093638
+73,Student Union Shuttle Stop Bike Rack 5,28.60279634,-81.20096388
+74,Student Union Shuttle Stop Bike Rack 6,28.60281812,-81.20099237
+75,Student Union Bike Rack 1,28.60134426,-81.20012317
+76,College of Science Bike Rack 1,28.60130952,-81.20011345
+77,Student Union Bike Rack 2,28.60135279,-81.20008294
+78,College of Science Bike Rack 2,28.60131806,-81.20006852
+79,Business Administration I Bike Rack,28.60153618,-81.1988404
+80,L3 Harris Engineering Center Bike Rack,28.600666,-81.19709236
+81,CREOL Bike Rack 2,28.60097018,-81.19738836
+82,CREOL Bike Rack 3,28.60107543,-81.1974124
+83,Classroom Building II Bike Rack,28.60416731,-81.20082055
+84,Millican Hall Bike Rack,28.59923498,-81.20148993
+85,John C. Hitt Library Bike Rack 1,28.60017695,-81.20187214
+86,John C. Hitt Library Bike Rack 2,28.60016371,-81.20184934
+87,John C. Hitt Library Bike Rack 3,28.60020433,-81.20192344
+88,John C. Hitt Library Bike Rack 4,28.6001902,-81.20189963
+89,Engineering II Bike Rack 3,28.60217671,-81.19781345
+90,Engineering II Bike Rack 4,28.60217671,-81.19784547
+91,Engineering II Bike Rack 5,28.60214713,-81.19778646
+92,Engineering II Bike Rack 6,28.60214654,-81.19784681
