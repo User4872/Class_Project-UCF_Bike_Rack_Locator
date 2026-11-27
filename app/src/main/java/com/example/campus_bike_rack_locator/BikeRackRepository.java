@@ -54,7 +54,8 @@ public class BikeRackRepository {
     // Must match validLevel() in the Firestore rules exactly.
     public static final List<String> LEVELS =
             Arrays.asList("empty", "low", "half", "nearly_full", "full");
-
+    public static final String QUALITY_RECOMMENDED = "recommended";
+    public static final String QUALITY_NOT_RECOMMENDED = "not_recommended";
     private static final String EMAIL_DOMAIN = "@bikerack.example";
 
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -214,5 +215,65 @@ public class BikeRackRepository {
                         cb.onError("Could not submit your report. Please try again.");
                     }
                 });
+    }
+
+    // ---------- Quality rating (recommended / not recommended) ----------
+
+    /**
+     * Saves (or changes) the signed-in user's rating for a rack.
+     * One rating per user per rack: the document ID is rackId + "_" + uid,
+     * so rating again replaces the old rating instead of adding a second vote.
+     *
+     * @param quality QUALITY_RECOMMENDED or QUALITY_NOT_RECOMMENDED
+     */
+    public void setRating(String rackId, String quality, Callback cb) {
+        FirebaseUser user = auth.getCurrentUser();
+        if (user == null) {
+            cb.onError("Please log in to rate a rack.");
+            return;
+        }
+        if (rackId == null || rackId.trim().isEmpty()) {
+            cb.onError("Pick a bike rack first.");
+            return;
+        }
+        if (!QUALITY_RECOMMENDED.equals(quality) && !QUALITY_NOT_RECOMMENDED.equals(quality)) {
+            cb.onError("Choose recommended or not recommended.");
+            return;
+        }
+
+        // Rules allow exactly these four keys; updatedAt must be request.time.
+        Map<String, Object> rating = new HashMap<>();
+        rating.put("rackId", rackId);
+        rating.put("userId", user.getUid());
+        rating.put("quality", quality);
+        rating.put("updatedAt", FieldValue.serverTimestamp());
+
+        db.collection("ratings").document(rackId + "_" + user.getUid()).set(rating)
+                .addOnSuccessListener(v -> cb.onSuccess())
+                .addOnFailureListener(e -> cb.onError(ratingError(e)));
+    }
+
+    /** Removes the signed-in user's rating for a rack (tapping the selected button again). */
+    public void clearRating(String rackId, Callback cb) {
+        FirebaseUser user = auth.getCurrentUser();
+        if (user == null) {
+            cb.onError("Please log in to rate a rack.");
+            return;
+        }
+        db.collection("ratings").document(rackId + "_" + user.getUid()).delete()
+                .addOnSuccessListener(v -> cb.onSuccess())
+                .addOnFailureListener(e -> cb.onError(ratingError(e)));
+    }
+
+    private static String ratingError(Exception e) {
+        if (e instanceof FirebaseNetworkException) {
+            return "No connection. Check your internet and try again.";
+        }
+        if (e instanceof FirebaseFirestoreException
+                && ((FirebaseFirestoreException) e).getCode()
+                == FirebaseFirestoreException.Code.PERMISSION_DENIED) {
+            return "You don't have permission to save that rating.";
+        }
+        return "Could not save your rating. Please try again.";
     }
 }
