@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         firstLaunch = savedInstanceState == null;
 
         findViewById(R.id.btnProfile).setOnClickListener(v ->
-                Toast.makeText(this, "Profile screen coming soon", Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(this, ProfileActivity.class)));
         findViewById(R.id.btnSearch).setOnClickListener(v ->
-                Toast.makeText(this, "Rack list coming soon", Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(this, SearchActivity.class)));
 
         FragmentManager fm = getSupportFragmentManager();
         SupportMapFragment mapFragment = (SupportMapFragment) fm.findFragmentById(R.id.map);

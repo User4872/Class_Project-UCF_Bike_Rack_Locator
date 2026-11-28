@@ -89,8 +89,8 @@ public class OccupancyActivity extends AppCompatActivity {
         if (name != null) tvRackName.setText(name);
 
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
-        findViewById(R.id.btnProfile).setOnClickListener(v ->
-                Toast.makeText(this, "Profile screen coming soon", Toast.LENGTH_SHORT).show());
+        findViewById(R.id.btnProfile).setOnClickListener(v -> Toast.makeText(this,
+                "Profile screen coming soon", Toast.LENGTH_SHORT).show());
 
         findViewById(R.id.tvWrongUpdate).setOnClickListener(v -> startEditing());
         findViewById(R.id.btnParkedYes).setOnClickListener(v -> startEditing());
@@ -127,9 +127,10 @@ public class OccupancyActivity extends AppCompatActivity {
     {
         super.onStart();
         if (rackId == null) return;
-        ratingsListener = FirebaseFirestore.getInstance()
-                .collection("ratings").whereEqualTo("rackId", rackId)
-                .addSnapshotListener((snap, error) -> {
+        ratingsListener = FirebaseFirestore.getInstance().collection("ratings")
+                .whereEqualTo("rackId", rackId)
+                .addSnapshotListener((snap, error) ->
+                {
                     if (error != null || snap == null) return;
                     String uid = repo.currentUid();
                     int rec = 0, not = 0;
@@ -145,19 +146,20 @@ public class OccupancyActivity extends AppCompatActivity {
                     myRating = mine;
                     renderRating();
                 });
-        listener = FirebaseFirestore.getInstance()
-                .collection("racks").document(rackId)
+        listener = FirebaseFirestore.getInstance().collection("racks")
+                .document(rackId)
                 .addSnapshotListener((doc, error) ->
                 {
                     if (error != null || doc == null) return;
                     if (!doc.exists())
                     {
-                        Toast.makeText(this, "That rack could not be found.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "That rack could not be found.",
+                                Toast.LENGTH_LONG).show();
                         return;
                     }
                     currentStatus = RackStatus.fromKey(doc.getString("currentStatus"));
-                    Timestamp ts = doc.getTimestamp("lastReportAt",
-                            DocumentSnapshot.ServerTimestampBehavior.ESTIMATE);
+                    Timestamp ts = doc.getTimestamp("lastReportAt", DocumentSnapshot
+                            .ServerTimestampBehavior.ESTIMATE);
                     lastReport = ts == null ? null : ts.toDate();
                     String name = doc.getString("name");
                     if (name != null) tvRackName.setText(name);
@@ -193,7 +195,8 @@ public class OccupancyActivity extends AppCompatActivity {
     {
         if (!repo.isLoggedIn())
         {
-            Toast.makeText(this, "Please log in to submit a report.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please log in to submit a report.",
+                    Toast.LENGTH_LONG).show();
             return;
         }
         pending = currentStatus != null ? currentStatus : RackStatus.HALF;
@@ -205,7 +208,8 @@ public class OccupancyActivity extends AppCompatActivity {
     {
         if (!repo.isLoggedIn())
         {
-            Toast.makeText(this, "Please log in to rate a rack.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please log in to rate a rack.",
+                    Toast.LENGTH_LONG).show();
             return;
         }
         ratingBusy = true;

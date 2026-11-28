@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -64,9 +65,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_search_field"
-                android:hint="Building Name"
+                android:hint="Building name or occupancy"
                 android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
                 android:inputType="text"
+                android:maxLines="1"
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"
                 android:textColor="@color/text_primary"
@@ -81,214 +84,52 @@
                 android:src="@drawable/ic_search" />
         </LinearLayout>
 
-        <ScrollView
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:scrollbars="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
 
             <LinearLayout
-                android:id="@+id/rackListContainer"
+                android:id="@+id/filterRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tvResultCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            tools:text="92 racks" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/rackList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/rackRow1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Burnett Honors College Bike Rack"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Business Administration II Bike Rack 1"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Business Administration II Bike Rack 2"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Business Administration II Bike Rack 3"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Chemistry Building Bike Rack"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Classroom Building II Bike Rack"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="College of Arts &amp; Humanities Bike Rack"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="College of Sciences Building Bike Rack 1"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="College of Science Building Bike Rack 2"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="College of Sciences Building Bike Rack 3"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="College of Science Building Bike Rack 4"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Engineering II Bike Rack 1"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Engineering II Bike Rack 2"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row_alt"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Engineering II Bike Rack 3"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/rackRow15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_rack_row"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:padding="16dp"
-                    android:text="Engineering II Bike Rack 4"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </ScrollView>
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="No racks match your search."
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </FrameLayout>
     </LinearLayout>
 </LinearLayout>
